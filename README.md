@@ -1,4 +1,4 @@
-# Private Cloud — Personal File Explorer
+# Private Cloud
 
 A lightweight, self-hosted web app for browsing, previewing, uploading, and downloading files from one or more folders on your machine. Designed for personal use over a LAN or VPN: add multiple drives/folders, preview common file types, zip downloads, and simple password access.
 
