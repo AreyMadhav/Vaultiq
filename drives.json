@@ -2,6 +2,6 @@
   {
     "id": "home",
     "name": "Home",
-    "path": "./files"
+    "path": "./files"  #change the path as you may like
   }
 ]
