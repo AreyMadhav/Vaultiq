@@ -1,6 +1,6 @@
 # Private Cloud
 
-A lightweight, self-hosted web app for browsing, previewing, uploading, and downloading files from one or more folders on your machine. Designed for personal use over a LAN or VPN: add multiple drives/folders, preview common file types, zip downloads, and simple password access.
+A lightweight, self-hosted web app for browsing, previewing, uploading, and downloading files from one or more folders on your machine. Designed for personal use over a LAN or VPN: add multiple drives/folders, preview common file types, zip downloads, and per-user password access.
 
 Supported features
 - Multiple drives/folders (configured in `drives.json`)
@@ -18,14 +18,15 @@ Getting started
 npm install
 ```
 
-2) Configure access password
+2) Configure environment variables
 
-Copy or create a `.env` file at the project root and set a strong access password:
+Copy or create a `.env` file at the project root. For normal use, set host and port; `ACCESS_PASSWORD` is only a legacy compatibility fallback for a single shared login.
 
 ```
-ACCESS_PASSWORD=your_secret_password_here
 HOST=0.0.0.0
 PORT=3000
+# Optional legacy fallback login
+# ACCESS_PASSWORD=your_secret_password_here
 ```
 
 3) Add drives / folders
@@ -88,13 +89,13 @@ Ports and host
 
 Environment variables
 
-- `ACCESS_PASSWORD` — required, the password used to log in.
+- `ACCESS_PASSWORD` — optional legacy fallback login for a single shared password.
 - `HOST` — network interface to bind (default `0.0.0.0` for accessibility on LAN/VPN).
 - `PORT` — server port (default `3000`).
 
 Security recommendations
 
-- Use a strong, unique `ACCESS_PASSWORD`.
+- If you do set `ACCESS_PASSWORD`, treat it as a fallback only and prefer named users in `server/users.json`.
 - Prefer running behind a reverse proxy (Caddy, nginx) for TLS termination and additional access controls.
 - If you only need local access, set `HOST=127.0.0.1`.
 - Keep `drives.json` limited to folders you intend to share; each drive is restricted to its root but misconfiguration can expose unwanted data.
