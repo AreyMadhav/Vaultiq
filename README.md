@@ -100,6 +100,21 @@ Security recommendations
 - If you only need local access, set `HOST=127.0.0.1`.
 - Keep `drives.json` limited to folders you intend to share; each drive is restricted to its root but misconfiguration can expose unwanted data.
 
+Security model
+
+- Authentication is per user: passwords are checked against `server/users.json` and the server creates an `httpOnly` session cookie after login.
+- Uploaded files are encrypted at rest with a per-user master key before they are stored on disk.
+- The browser never sees the master key directly; the server uses it to decrypt files for preview, download, and raw streaming after authentication.
+- `ACCESS_PASSWORD` only exists as a legacy shared-password fallback when no named account is available.
+
+Security limitations
+
+- Sessions are cookie-based but there is no CSRF token layer, so do not expose the app broadly without a reverse proxy or additional controls.
+- The app does not add TLS itself; use HTTPS if the server is reachable beyond a trusted LAN or VPN.
+- The shared fallback password is weaker than per-user accounts because anyone who knows it can log in with any username.
+- Access control is designed for personal or trusted-network use, not for public internet exposure.
+- The server does not implement account lockout or rate limiting in the login flow.
+
 Deployment tips
 
 - For LAN/VPN access: ensure your machine's firewall allows the chosen `PORT` for the desired interface.
