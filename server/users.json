@@ -1,0 +1,11 @@
+[
+  {
+    "username": "AreyMadhav",
+    "authSalt": "a52351391478a27edc9c554fd17abdce",
+    "authHash": "d0d64b9c896d7fa67e59edf4c2e9fd9c91ebafe1e0a685c974a7a252d486de90",
+    "encSalt": "b03ece19665acfea1a406768b1c956cc",
+    "enc": "2646dd9115884a3cf802f4db555835e5198279ea277ee4e698ffeafeb8fdb922",
+    "encIv": "13ddc85dd9ba6b3dd00b9101",
+    "encTag": "d5d15e8e5299f090be2cd158e51db20f"
+  }
+]
