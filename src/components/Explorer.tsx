@@ -221,7 +221,7 @@ export function Explorer({ onLogout }: { onLogout: () => void }) {
               <FolderOpen className="w-5 h-5 text-white" />
             </div>
               <span className="text-base sm:text-lg font-semibold text-white hidden sm:block">
-              Private Cloud
+              Vaultiq
             </span>
           </div>
           <div className="flex-1 min-w-0 overflow-hidden">

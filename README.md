@@ -1,4 +1,4 @@
-# Private Cloud
+# Vaultiq — Personal Cloud Vault
 
 A lightweight, self-hosted web app for browsing, previewing, uploading, and downloading files from one or more folders on your machine. Designed for personal use over a LAN or VPN: add multiple drives/folders, preview common file types, zip downloads, and per-user password access.
 
@@ -176,7 +176,7 @@ Troubleshooting (Windows & VPN)
 
 		```powershell
 		# run as Administrator
-		New-NetFirewallRule -DisplayName "FileExplorer" -Direction Inbound -LocalPort 3000 -Protocol TCP -Action Allow
+		New-NetFirewallRule -DisplayName "Vaultiq" -Direction Inbound -LocalPort 3000 -Protocol TCP -Action Allow
 		```
 
 	- From another VPN device, test with curl or a browser:

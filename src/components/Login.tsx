@@ -54,7 +54,7 @@ export function Login({ onLogin }: { onLogin: () => void }) {
           <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-sky-500 to-emerald-500 flex items-center justify-center shadow-lg shadow-sky-500/20 mb-4">
             <FolderOpen className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-2xl font-semibold text-white tracking-tight">Private Cloud</h1>
+          <h1 className="text-2xl font-semibold text-white tracking-tight">Vaultiq</h1>
           <p className="text-slate-400 text-sm mt-1">Sign in to access your private files</p>
         </div>
 

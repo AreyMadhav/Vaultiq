@@ -785,7 +785,7 @@ async function main() {
   }
   const app = createApp();
   app.listen(PORT, HOST, () => {
-    console.log(`\n  Private Cloud running`);
+    console.log(`\n  Vaultiq running`);
     // list accessible URLs
     const nets = os.networkInterfaces();
     const addresses: string[] = [];
@@ -810,7 +810,7 @@ async function main() {
     for (const d of DRIVES) {
       console.log(`    • ${d.name}  [${d.id}]  →  ${d.path}`);
     }
-    console.log(`  Access password: ${ACCESS_PASSWORD ? 'set' : 'not set'}`);
+    console.log(`  Legacy access password fallback: ${ACCESS_PASSWORD ? 'enabled' : 'disabled'}`);
     console.log(`  Edit drives.json to add or remove drives/disks.`);
     console.log('');
   });
