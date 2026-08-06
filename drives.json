@@ -3,15 +3,5 @@
     "id": "home",
     "name": "Home",
     "path": "./files"
-  },
-  {
-    "id": "d",
-    "name": "D Drive",
-    "path": "D:\\"
-  },
-  {
-    "id": "e",
-    "name": "E Drive",
-    "path": "E:\\"
   }
 ]
